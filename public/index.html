@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUCMe - 위치 공유 서비스</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="create-room" class="screen">
+            <h1>방 만들기</h1>
+            <form id="create-room-form">
+                <input type="text" id="room-name" placeholder="방 이름" required>
+                <input type="text" id="user-name" placeholder="사용자 이름" required>
+                <input type="password" id="room-password" placeholder="비밀번호" required>
+                <select id="room-duration" required>
+                    <option value="">유지 시간 선택</option>
+                    <option value="30">30분</option>
+                    <option value="60">1시간</option>
+                    <option value="120">2시간</option>
+                    <option value="240">4시간</option>
+                </select>
+                <button type="submit">방 만들기</button>
+            </form>
+        </div>
+        <div id="map-screen" class="screen" style="display:none;">
+            <div id="room-info">
+                <h2 id="room-name-display"></h2>
+                <p id="participants"></p>
+                <p id="time-left"></p>
+                <button id="share-button">공유</button>
+                <button id="leave-button">나가기</button>
+            </div>
+            <div id="map"></div>
+        </div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

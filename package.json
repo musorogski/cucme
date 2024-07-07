@@ -1,0 +1,32 @@
+{
+    "name": "cucme",
+    "version": "1.0.0",
+    "description": "위치 공유 웹 서비스",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "dev": "nodemon server/server.js",
+      "test": "jest"
+    },
+    "keywords": [
+      "location",
+      "sharing",
+      "real-time"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^5.0.1",
+      "dotenv": "^10.0.0",
+      "express": "^4.17.1",
+      "mongoose": "^6.0.12",
+      "socket.io": "^4.3.1"
+    },
+    "devDependencies": {
+      "jest": "^27.3.1",
+      "nodemon": "^2.0.14"
+    },
+    "engines": {
+      "node": ">=14.0.0"
+    }
+  }
